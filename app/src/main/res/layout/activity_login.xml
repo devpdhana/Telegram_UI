@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".Login_Activity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/txtPhone"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:text="@string/your_phone_number"
         android:textColor="@color/black"
         android:textSize="26sp"
@@ -45,17 +47,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtcmt2"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/edtCountry"
         app:startIconDrawable="@drawable/flag"
-        app:layout_constraintTop_toBottomOf="@id/txtcmt2"
-        android:layout_margin="30dp">
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
             android:hint="@string/country"
-            android:textColor="@color/black"/>
+            android:textSize="14sp"
+            />
+
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,19 +73,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtCountry"
-        android:layout_margin="30dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/phone_number"
-            android:textColor="@color/black"/>
+            android:autofillHints="emailAddress"
+            android:inputType="textEmailAddress"
+            android:hint="@string/_91_0000000000"
+            android:textSize="14sp"
+            />
+
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:src="@drawable/forward_arrow"
+        android:background="@drawable/round_back"/>
 
 
 
