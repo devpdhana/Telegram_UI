@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Telegram_UI</string>
+    <string name="telegram">Telegram</string>
+    <string name="all_chats">All Chats</string>
+    <string name="personal">personal</string>
+    <string name="start_messaging">Start Messaging</string>
+    <string name="image">image</string>
+</resources>
