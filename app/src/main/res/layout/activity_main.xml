@@ -47,31 +47,22 @@
             android:src="@drawable/search"
             android:id="@+id/imgSearch"
             android:layout_marginStart="20dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@+id/imgMenu"
-            app:layout_constraintTop_toBottomOf="@+id/txtTelegram"
-            android:text="@string/all_chats"
-            android:id="@+id/txtAllChats"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTelegram"
-            android:layout_marginEnd="30dp"
-            android:text="@string/personal"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            />
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
+            android:background="@color/blue"
+            app:layout_constraintTop_toBottomOf="@id/txtTelegram">
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/tele_blue"
+                android:id="@+id/TablayoutMain"
+                app:tabTextColor="@color/white"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"/>
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
