@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/telegramHeader"
         android:background="@color/tele_blue"
         >
 
@@ -34,16 +35,15 @@
             android:text="@string/telegram"
             android:id="@+id/txtTelegram"
             android:textColor="@color/white"
-            android:textSize="26sp"
+            android:textSize="24sp"
             android:textStyle="bold"/>
 
         <ImageView
             android:layout_width="26dp"
             android:layout_height="26dp"
+            android:layout_margin="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scrollbarSize="20dp"
-            android:layout_marginTop="3dp"
             android:src="@drawable/search"
             android:id="@+id/imgSearch"
             android:layout_marginStart="20dp"/>
@@ -64,6 +64,89 @@
                 app:tabIndicatorColor="@color/white"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/telegramHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/personalChats"
+                    >
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+
+                    <include layout="@layout/chat_layout" />
+
+                    <include layout="@layout/chat_layout" />
+
+                    <include layout="@layout/chat_layout" />
+                    <include layout="@layout/chat_layout" />
+                    <include layout="@layout/chat_layout" />
+                    <include layout="@layout/chat_layout" />
+                    <include layout="@layout/chat_layout" />
+                    <include layout="@layout/chat_layout" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/groupChats"
+                    android:visibility="gone"
+                    >
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+                    <include
+                        layout="@layout/chat_layout"/>
+
+                    <include layout="@layout/chat_layout" />
+
+                    <include layout="@layout/chat_layout" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,4 +14,6 @@
     <string name="phone_number">Phone number</string>
     <string name="password">Password</string>
     <string name="_91_0000000000">+91 0000000000</string>
+    <string name="photo">Photo</string>
+    <string name="_30">30</string>
 </resources>
